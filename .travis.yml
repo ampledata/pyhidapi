@@ -5,6 +5,8 @@ python:
 script: pytest
 addons:
     apt:
+        sources:
+        - debian-sid
         packages:
         - libhidapi-dev
 deploy:
