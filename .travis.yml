@@ -10,9 +10,6 @@ addons:
     apt:
         packages:
         - libhidapi-dev
-before_install:
-- sudo apt-get -qq update
-- sudo apt-get -y install libhidapi-dev
 deploy:
     provider: pypi
     user: Nonymus   
