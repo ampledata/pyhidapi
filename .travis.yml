@@ -4,6 +4,7 @@ language: python
 python:
 - '2.7'
 - '3.6'
+before_script: pip install -e .
 script: pytest
 before_install:
 - sudo apt-get -qq update
