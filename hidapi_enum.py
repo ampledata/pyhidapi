@@ -21,14 +21,14 @@
 
 """Enumerate all HID devices on the system."""
 
-import hidapi
+import pyhidapi
 
 if __name__ == '__main__':
-    hidapi.hid_init()
+    pyhidapi.hid_init()
     
-    print('Loaded hidapi library from: {:s}\n'.format(hidapi.hid_lib_path()))
+    print('Loaded hidapi library from: {:s}\n'.format(pyhidapi.hid_lib_path()))
 
-    for dev in hidapi.hid_enumerate():
+    for dev in pyhidapi.hid_enumerate():
         print('------------------------------------------------------------')
         print(dev.description())
 

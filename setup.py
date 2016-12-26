@@ -38,20 +38,23 @@ Usage examples:
     Create a source distribution:
         ./setup.py sdist
 
+    Create wheels
+        ./setup.py bdist_wheel
+
 """
 
 
-from distutils.core import setup
-from hidapi import __version__, __pkg_url__, __dl_url__
+from setuptools import setup
+from pyhidapi import __version__, __pkg_url__, __dl_url__
 
 setup(name          = 'pyhidapi',
       version       = __version__,
-      description   = 'Python binding for hidapi library.',
+      description   = 'Python binding for pyhidapi library.',
       author        = 'Mark J. Blair',
       author_email  = 'nf6x@nf6x.net',
       url           = __pkg_url__,
       download_url  = __dl_url__,
       license       = 'GPLv3',
-      packages      = ['hidapi'],
+      packages      = ['pyhidapi'],
       scripts       = ['hidapi_enum.py'])
 
