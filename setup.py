@@ -47,14 +47,16 @@ Usage examples:
 from setuptools import setup
 from pyhidapi import __version__, __pkg_url__, __dl_url__
 
-setup(name          = 'pyhidapi',
-      version       = __version__,
-      description   = 'Python binding for pyhidapi library.',
-      author        = 'Mark J. Blair',
-      author_email  = 'nf6x@nf6x.net',
-      url           = __pkg_url__,
-      download_url  = __dl_url__,
-      license       = 'GPLv3',
-      packages      = ['pyhidapi'],
-      scripts       = ['hidapi_enum.py'])
+setup(name             = 'pyhidapi',
+      version          = __version__,
+      description      = 'Python binding for pyhidapi library.',
+      author           = 'Mark J. Blair',
+      author_email     = 'nf6x@nf6x.net',
+      maintainer       = 'Julian Poschmann',
+      maintainer_email = 'nonymus@nonymus.de',
+      url              = __pkg_url__,
+      download_url     = __dl_url__,
+      license          = 'GPLv3',
+      packages         = ['pyhidapi'],
+      scripts          = ['hidapi_enum.py'])
 
