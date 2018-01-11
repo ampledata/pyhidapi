@@ -65,6 +65,7 @@ Public functions defined by this module:
 
 from ctypes import *
 from ctypes.util import find_library
+from sys import platform
 
 # Define public classes:
 
@@ -161,7 +162,10 @@ def __load_hidapi():
             raise RuntimeError('Could not find the hidapi shared library.')
 
         # Load the hidapi library.
-        __hidapi = CDLL(__libpath)
+        if platform == "linux" or platform == "linux2":
+            __hidapi = CDLL(r"/usr/local/lib/{}".format(__libpath))
+        else:
+            __hidapi = CDLL(__libpath)
         assert __hidapi is not None
 
         # Define argument and return types for the hidapi library functions.
